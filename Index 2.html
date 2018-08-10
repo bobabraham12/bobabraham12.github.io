@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+
+  </script>
+  <style>
+    body{
+      background-color:red;
+    }
+    #pastaimage{
+	position:absolute;
+  top: 60%;
+	left:0%; /* Set initial position for each image off-screen left -- adjust according to image width */
+	animation:mymove 8s infinite;	/* total animation time for each image is 8 seconds, loops forever */
+	animation-direction:alternate;
+	/* Firefox */
+	-moz-animation:mymove 8s infinite;
+	-moz-animation-direction:alternate;
+	/* Safari, Chrome, and Webkit Opera */
+	-webkit-animation:mymove 8s infinite;
+	-webkit-animation-direction:alternate;
+	/* Presto Opera */
+	-o-animation:mymove 8s infinite;
+	-o-animation-direction:alternate;
+}
+
+
+
+/* Animation start and stop points */
+@keyframes mymove
+	{
+	from {left:0%;}	/*off-screen left (adjust for image width)*/
+	to {right:0%;}		/*off-screen right*/
+	}
+
+@-moz-keyframes mymove /* Firefox */
+	{
+	from {left:0%;}
+	to {left:74%;}
+	}
+
+@-webkit-keyframes mymove /* Safari, Chrome, and Webkit Opera */
+	{
+	from {left:0%;}
+	to {left:74%;}
+	}
+
+@-o-keyframes mymove /* Presto Opera */
+	{
+	from {left:0%;}
+	to {left:74%;}
+	}
+  </style>
+  <title>
+    John's WPI Page 2
+  </title>
+</head>
+<body>
+  <center>
+  This is John's second page at WPI.
+  <p>
+    Spaghetti is actually made from wheat not vegetables. Pasta is made from a mixture of water and semolina flour. This diagram shows part of the process of how spaghetti is made.
+  </p>
+  <img src="Pasta.jpg" width="500" />
+  <img id="pastaimage" src="pasta3.jpg" width="500" />
+  <h2>Reminder</h2>
+<button type="button" onclick="alert('Spaghetti is Delicious!')">Click Me!</button>
+<a href = "index.html">Page 1</a>
+<a href = "TableofPasta.html">Page 3</a>
+</center>
+</body>
+</html>
